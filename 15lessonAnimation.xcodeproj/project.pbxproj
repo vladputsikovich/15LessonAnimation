@@ -13,6 +13,7 @@
 		ED594C92275E64D4000DAD6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED594C90275E64D4000DAD6F /* Main.storyboard */; };
 		ED594C94275E64D5000DAD6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED594C93275E64D5000DAD6F /* Assets.xcassets */; };
 		ED594C97275E64D5000DAD6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED594C95275E64D5000DAD6F /* LaunchScreen.storyboard */; };
+		EDAF373427612EF800BA2A15 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = EDAF373327612EF800BA2A15 /* Images */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		ED594C93275E64D5000DAD6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED594C96275E64D5000DAD6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED594C98275E64D5000DAD6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDAF373327612EF800BA2A15 /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		ED594C89275E64D4000DAD6F /* 15lessonAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				EDAF373327612EF800BA2A15 /* Images */,
 				ED594C8A275E64D4000DAD6F /* AppDelegate.swift */,
 				ED594C8C275E64D4000DAD6F /* SceneDelegate.swift */,
 				ED594C8E275E64D4000DAD6F /* ViewController.swift */,
@@ -125,6 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDAF373427612EF800BA2A15 /* Images in Resources */,
 				ED594C97275E64D5000DAD6F /* LaunchScreen.storyboard in Resources */,
 				ED594C94275E64D5000DAD6F /* Assets.xcassets in Resources */,
 				ED594C92275E64D4000DAD6F /* Main.storyboard in Resources */,
