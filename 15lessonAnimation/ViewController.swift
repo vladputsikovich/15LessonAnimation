@@ -92,7 +92,8 @@ class ViewController: UIViewController {
             1 : (50, 50),
             2 : (50, self.view.bounds.height  - 50),
             3 : (self.view.bounds.width - 50, self.view.bounds.height  - 50),
-            4 : (self.view.bounds.width  - 50, 50)]
+            4 : (self.view.bounds.width  - 50, 50)
+        ]
         if let pos = positions[position] {
             return pos
         } else {
@@ -102,7 +103,7 @@ class ViewController: UIViewController {
     
     func returnColor(_ position: Int) -> UIColor {
         let colors = [ UIColor.blue, UIColor.orange, UIColor.red, UIColor.black ]
-        return colors[position-1]
+        return colors[ position-1 ]
     }
     
     func makeView(_ reverse: Bool) {
