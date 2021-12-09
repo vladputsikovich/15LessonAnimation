@@ -23,15 +23,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        addView(x: 20, y: 20, width: 100, height: 100, option: UIView.KeyframeAnimationOptions.autoreverse)
-//
-//        addView(x: 20, y: 130, width: 100, height: 100, option: UIView.KeyframeAnimationOptions.allowUserInteraction)
-//
-//        addView(x: 20, y: 240, width: 100, height: 100, option: UIView.KeyframeAnimationOptions.allowUserInteraction)
-//
-//        addView(x: 20, y: 350, width: 100, height: 100, option: UIView.KeyframeAnimationOptions.allowUserInteraction)
-//
-//        addView(x: 20, y: 460, width: 100, height: 100, option: UIView.KeyframeAnimationOptions.allowUserInteraction)
+        addView(x: 20, y: 20, width: 100, height: 100, option: UIView.KeyframeAnimationOptions.allowUserInteraction)
+        addView(x: 20, y: 130, width: 100, height: 100, option: UIView.KeyframeAnimationOptions.allowUserInteraction)
+        addView(x: 20, y: 240, width: 100, height: 100, option: UIView.KeyframeAnimationOptions.allowUserInteraction)
+        addView(x: 20, y: 350, width: 100, height: 100, option: UIView.KeyframeAnimationOptions.allowUserInteraction)
+        addView(x: 20, y: 460, width: 100, height: 100, option: UIView.KeyframeAnimationOptions.allowUserInteraction)
         
         makeView(true)
         goingMan()
