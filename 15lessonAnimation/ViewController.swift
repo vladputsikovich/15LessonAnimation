@@ -78,6 +78,7 @@ class ViewController: UIViewController {
             }
         }
     }
+    
     func viewToCorner(_ position: Int, _ reverse: Bool) {
         let coord = returnCoord(position)
         let view = UIView(frame: CGRect(x: coord.0, y: coord.1, width: 100, height: 100))
@@ -111,7 +112,7 @@ class ViewController: UIViewController {
         viewToCorner(4, reverse)
     }
     
-    func goingMan(){
+    func goingMan() {
         guard let img1 = UIImage(named: "img1.png") else {return}
         guard let img2 = UIImage(named: "img2.png") else {return}
         guard let img3 = UIImage(named: "img3.png") else {return}
