@@ -94,11 +94,8 @@ class ViewController: UIViewController {
             3 : (self.view.bounds.width - 50, self.view.bounds.height  - 50),
             4 : (self.view.bounds.width  - 50, 50)
         ]
-        if let pos = positions[position] {
-            return pos
-        } else {
-            return (0, 0)
-        }
+        guard let pos = positions[position] else {return nil}
+        return pos
     }
     
     func returnColor(_ position: Int) -> UIColor {
