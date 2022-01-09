@@ -33,9 +33,15 @@ class ViewController: UIViewController {
         goingMan()
     }
     
-    
     func addView(x: Int, y: Int, width: Int, height: Int, option: UIView.KeyframeAnimationOptions) {
-        let view = UIView(frame: CGRect(x: x, y: y, width: width, height: height))
+        let view = UIView(
+            frame: CGRect(
+                x: x,
+                y: y,
+                width: width,
+                height: height
+            )
+        )
         view.backgroundColor = UIColor.blue
         self.view.addSubview(view)
         
@@ -43,7 +49,10 @@ class ViewController: UIViewController {
             withDuration: 5,
             delay: 1,
             options: option) {
-                view.center = CGPoint(x: self.view.bounds.width - view.frame.width / 2, y: CGFloat(y) + view.frame.width / 2)
+                view.center = CGPoint(
+                    x: self.view.bounds.width - view.frame.width / 2,
+                    y: CGFloat(y) + view.frame.width / 2
+                )
                 view.backgroundColor = UIColor().random()
         } completion: { use in
             print(use)
@@ -56,7 +65,10 @@ class ViewController: UIViewController {
             withDuration: 3,
             delay: 0,
             options: .calculationModeLinear) {
-                view.center = CGPoint(x: coord.0, y: coord.1)
+                view.center = CGPoint(
+                    x: coord.0,
+                    y: coord.1
+                )
                 view.backgroundColor = color
         } completion: { use in
             if reverse {
@@ -77,7 +89,14 @@ class ViewController: UIViewController {
     
     func viewToCorner(_ position: Int, _ reverse: Bool) {
         let coord = returnCoord(position)
-        let view = UIView(frame: CGRect(x: coord.0, y: coord.1, width: 100, height: 100))
+        let view = UIView(
+            frame: CGRect(
+                x: coord.0,
+                y: coord.1,
+                width: 100,
+                height: 100
+            )
+        )
         view.backgroundColor = returnColor(position)
         self.view.addSubview(view)
         animateToCorner(view, returnColor(position), position, reverse)
@@ -90,13 +109,16 @@ class ViewController: UIViewController {
             3 : (self.view.bounds.width - 50, self.view.bounds.height  - 50),
             4 : (self.view.bounds.width  - 50, 50)
         ]
-        guard let pos = positions[position] else {return nil}
-        return pos
+        if let pos = positions[position] {
+            return pos
+        } else {
+            return (.zero, .zero)
+        }
     }
     
     func returnColor(_ position: Int) -> UIColor {
         let colors = [ UIColor.blue, UIColor.orange, UIColor.red, UIColor.black ]
-        return colors[ position-1 ]
+        return colors[ position - 1 ]
     }
     
     func makeView(_ reverse: Bool) {
@@ -106,28 +128,37 @@ class ViewController: UIViewController {
         viewToCorner(4, reverse)
     }
     
-    func goingMan() {
-        guard let img1 = UIImage(named: "img1.png") else {return}
-        guard let img2 = UIImage(named: "img2.png") else {return}
-        guard let img3 = UIImage(named: "img3.png") else {return}
-        guard let img4 = UIImage(named: "img4.png") else {return}
-        guard let img5 = UIImage(named: "img5.png") else {return}
-        guard let img6 = UIImage(named: "img6.png") else {return}
-        guard let img7 = UIImage(named: "img7.png") else {return}
-        guard let img8 = UIImage(named: "img8.png") else {return}
+    func goingMan(){
+        guard let img1 = UIImage(named: "img1.png") else { return }
+        guard let img2 = UIImage(named: "img2.png") else { return }
+        guard let img3 = UIImage(named: "img3.png") else { return }
+        guard let img4 = UIImage(named: "img4.png") else { return }
+        guard let img5 = UIImage(named: "img5.png") else { return }
+        guard let img6 = UIImage(named: "img6.png") else { return }
+        guard let img7 = UIImage(named: "img7.png") else { return }
+        guard let img8 = UIImage(named: "img8.png") else { return }
         
-        let imgArray: [UIImage] = [img1, img2, img3, img4, img5, img6 , img7, img8]
-        let view = UIImageView(frame: CGRect(x: 0, y: 100, width: 50, height: 79))
+        let imgArray: [UIImage] = [ img1, img2, img3, img4, img5, img6 , img7, img8 ]
+        let view = UIImageView(
+            frame: CGRect(
+                x: 0,
+                y: 100,
+                width: 50,
+                height: 79
+            )
+        )
         
         view.animationImages = imgArray
         
         view.startAnimating()
         self.view.addSubview(view)
         UIView.animate(withDuration: 5, delay: 1, options: .curveLinear) {
-            view.center = CGPoint(x: self.view.bounds.width - view.frame.width / 2, y: 125)
+            view.center = CGPoint(
+                x: self.view.bounds.width - view.frame.width / 2,
+                y: 125
+            )
         } completion: { cond in
             print(cond)
         }
     }
 }
-
